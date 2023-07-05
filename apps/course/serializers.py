@@ -5,7 +5,7 @@ from .models import Course, Lesson, Task, ForExample
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
-        fields = ['title', 'image_path', 'duration', 'price', 'body', 'lessons_count']
+        fields = ['id', 'title', 'image_path', 'duration', 'price', 'body', 'lessons_count']
 
     lessons_count = serializers.SerializerMethodField()
 
